@@ -179,6 +179,10 @@
       }
     }
   }
+  .slideshow-section img {
+    object-fit: contain;
+    max-height: 100%;
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -402,7 +406,7 @@
       "id": "padding-block-start",
       "label": "t:settings.top",
       "min": 0,
-      "max": 100,
+      "max": 300,
       "step": 1,
       "unit": "px",
       "default": 0
