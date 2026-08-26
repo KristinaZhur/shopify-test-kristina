@@ -9,6 +9,47 @@
  */
 {
   "sections": {
+    "section_marquee_DYXr7D": {
+      "type": "section-marquee",
+      "blocks": {
+        "text_BiBnqg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Envío gratis a partir de 30€ — Juguetes y Juegos de Mesa</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "tight",
+            "letter_spacing": "loose",
+            "case": "none",
+            "wrap": "nowrap",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_BiBnqg"
+      ],
+      "name": "t:names.marquee_section",
+      "settings": {
+        "movement_direction": "normal",
+        "background_color": "#1069f9",
+        "padding-block-start": 24,
+        "padding-block-end": 24,
+        "gap_between_elements": 24
+      }
+    },
     "slideshow_hKzkwJ": {
       "type": "slideshow",
       "blocks": {
@@ -16,26 +57,45 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/684_VCOLE_HOME_1920x500_76e1abf3-ec44-4da1-87dc-ad9ebec689b5.png",
+            "image_1": "shopify://shop_images/684_VCOLE_HOME_1920x500_cleanup_1.png",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "flex-end",
             "gap": 12,
             "background_color": "",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "padding-block-start": 48,
-            "padding-block-end": 48,
-            "padding-inline-start": 48,
-            "padding-inline-end": 48
+            "padding-block-start": 54,
+            "padding-block-end": 46,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
+            "button_ePTti8": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "Comprar",
+                "link": "shopify://collections",
+                "open_in_new_tab": true,
+                "style_class": "button-custom",
+                "custom_button_background": "#001C85",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "rgba(0,0,0,0)",
+                "link_text_color": "#002878",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            },
             "text_wzgGyH": {
               "type": "text",
               "name": "t:names.heading",
@@ -89,6 +149,7 @@
             }
           },
           "block_order": [
+            "button_ePTti8",
             "text_wzgGyH",
             "text_g6bpDx"
           ]
@@ -97,26 +158,45 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/670_Banner_Principal-Home-Desk_1920x500_e0f5b2d2-30c1-46e6-8c9d-91a84d2f1c80.png",
+            "image_1": "shopify://shop_images/670_Banner_Principal-Home-Desk_1920x500_cleanup.png",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "flex-end",
             "gap": 12,
             "background_color": "",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "padding-block-start": 48,
-            "padding-block-end": 48,
-            "padding-inline-start": 48,
-            "padding-inline-end": 48
+            "padding-block-start": 54,
+            "padding-block-end": 46,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
+            "button_HUqPwQ": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "Comprar",
+                "link": "shopify://collections/all",
+                "open_in_new_tab": false,
+                "style_class": "button-custom",
+                "custom_button_background": "#001C85",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "rgba(0,0,0,0)",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            },
             "text_Y9Wyzm": {
               "type": "text",
               "settings": {
@@ -144,6 +224,7 @@
             }
           },
           "block_order": [
+            "button_HUqPwQ",
             "text_Y9Wyzm"
           ]
         }
@@ -152,6 +233,7 @@
         "slide_nJVUBg",
         "slide_BF4j4N"
       ],
+      "custom_css": [],
       "name": "t:names.slideshow_full_frame",
       "settings": {
         "display_mode": "full_frame",
@@ -159,9 +241,9 @@
         "full_frame_on_mobile": false,
         "slideshow_gap": 12,
         "corner_radius": 0,
-        "slide_height": "medium",
+        "slide_height": "small",
         "content_position": "on-media",
-        "background_color": "",
+        "background_color": "#000000",
         "icons_style": "arrows_large",
         "icons_shape": "circle",
         "slideshow_controls_style": "dots",
@@ -672,47 +754,6 @@
       "settings": {
         "heading": "Juguetería online",
         "text": "Descubre en nuestra tienda de juguetes más de 1000 referencias diferentes con las mejores marcas y licencias en todos los productos. Desde juguetes educativos, juegos de mesa, pasando por los mejores disfraces para las celebraciones más divertidas."
-      }
-    },
-    "section_marquee_DYXr7D": {
-      "type": "section-marquee",
-      "blocks": {
-        "text_BiBnqg": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Envío gratis a partir de 30€ — Juguetes y Juegos de Mesa\"</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "tight",
-            "letter_spacing": "tight",
-            "case": "none",
-            "wrap": "nowrap",
-            "text_color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_BiBnqg"
-      ],
-      "name": "t:names.marquee_section",
-      "settings": {
-        "movement_direction": "normal",
-        "background_color": "#002878",
-        "padding-block-start": 24,
-        "padding-block-end": 24,
-        "gap_between_elements": 24
       }
     }
   },
