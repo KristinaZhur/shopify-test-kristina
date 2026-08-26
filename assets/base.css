@@ -1828,6 +1828,20 @@ label:has(input[type='checkbox']:disabled) {
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(var(--color-foreground-rgb) / var(--opacity-60));
 }
+/*estilo para btn*/
+.button {
+  min-width: 200px;
+  padding-left: 35px;
+  padding-right: 35px ;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #002680;
+  color: #ffffff; 
+  transform: scale(1.05); 
+}
+/*estilo para btn final*/
 
 @media (prefers-reduced-motion: no-preference) {
   html {
