@@ -342,6 +342,7 @@
     // Scrolling text/content component with horizontal animation
     "marquee": "Marquee",
     "marquee_section": "Marquee",
+    "section_marquee":"Info",
     // Block name for image/video component
     "media": "Media",
     "media_with_text": "Media with text",
