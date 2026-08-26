@@ -282,7 +282,8 @@
               "type": "icon",
               "settings": {
                 "icon": "eye",
-                "width": 32,
+                "image_upload": "shopify://shop_images/643_disney_377x377_01ec50a7-27b3-448f-8d02-9dd7a28a0c33.png",
+                "width": 108,
                 "link": "",
                 "open_in_new_tab": false,
                 "icon_color": ""
@@ -331,7 +332,7 @@
                 "text_bmK7dE": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>Intentional design</h2>",
+                    "text": "",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -356,7 +357,7 @@
                 "text_HHEq9h": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Everything we do starts with why</p>",
+                    "text": "",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -433,7 +434,8 @@
               "type": "icon",
               "settings": {
                 "icon": "heart",
-                "width": 32,
+                "image_upload": "shopify://shop_images/644_fisher-price_377x377_a113bc94-3b33-41df-8295-1a18614eb89c.png",
+                "width": 108,
                 "link": "",
                 "open_in_new_tab": false,
                 "icon_color": ""
@@ -482,7 +484,7 @@
                 "text_jnBTdf": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>Made with care</h2>",
+                    "text": "",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -507,7 +509,7 @@
                 "text_pUkXWF": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We believe in building better</p>",
+                    "text": "",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -584,7 +586,8 @@
               "type": "icon",
               "settings": {
                 "icon": "silhouette",
-                "width": 32,
+                "image_upload": "shopify://shop_images/641_barbie_377x377_a0186b55-8e63-45c9-93a4-e9be8eabf988.png",
+                "width": 108,
                 "link": "",
                 "open_in_new_tab": false,
                 "icon_color": ""
@@ -633,7 +636,7 @@
                 "text_nQPBDk": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>A team with a goal</h2>",
+                    "text": "",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -658,7 +661,7 @@
                 "text_qmniBE": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Real people making great products</p>",
+                    "text": "",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
