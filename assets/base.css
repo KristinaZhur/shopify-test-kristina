@@ -29,6 +29,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 @media (min-width: 990px) {
   html:has(.page-wrapper),
   html:has(.page-wrapper) body {
