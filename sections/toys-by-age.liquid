@@ -1,0 +1,139 @@
+<div class="toys-by-age section-{{ section.id }}-padding">
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <h2 class="toys-by-age__title">
+        {{ section.settings.title }}
+      </h2>
+    {%- endif -%}
+
+    <div class="toys-by-age__wrapper">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.label != blank -%}
+          <a
+            href="{{ block.settings.link | default: '#' }}"
+            class="toys-by-age__pill"
+            {{ block.shopify_attributes }}
+          >
+            {{ block.settings.label }}
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .toys-by-age__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    color: #001C85;
+    margin-bottom: 24px;
+    margin-top: 0;
+  }
+
+  .toys-by-age__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom:10px;
+  }
+
+  .toys-by-age__pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F1F4FA;
+    color: #000000;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .toys-by-age__pill:hover {
+    background-color: #337ab7;
+    transform: translateY(-2px);
+    color: #ffffff;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Juguetes por edad",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Juguetes para:",
+      "label": "Nombre"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "age_pill",
+      "name": "Age",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "text",
+          "default": "1 a 2 años"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Enlace"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Juguetes por edad",
+      "blocks": [
+        { "type": "age_pill", "settings": { "label": "bebés" } },
+        { "type": "age_pill", "settings": { "label": "1 a 2 años" } },
+        { "type": "age_pill", "settings": { "label": "3 a 4 años" } },
+        { "type": "age_pill", "settings": { "label": "5 a 6 años" } },
+        { "type": "age_pill", "settings": { "label": "7 a 8 años" } },
+        { "type": "age_pill", "settings": { "label": "9 a 10 años" } },
+        { "type": "age_pill", "settings": { "label": "11 a 12 años" } },
+        { "type": "age_pill", "settings": { "label": "13 a 14 años" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,221 @@
+<nav class="secondary-header-menu" aria-label="Secondary Navigation">
+  <div class="secondary-header-menu__container">
+    <ul class="secondary-header-menu__list">
+
+      <!-- Imaginarium Logo -->
+      <li class="secondary-header-menu__item">
+        <a href="#" class="secondary-header-menu__link link-imaginarium">
+          <img 
+            src="{{ 'logo-imaginarium.png' | asset_url }}" 
+            alt="Imaginarium" 
+            class="imaginarium-logo-img" 
+            width="110" 
+            height="18" 
+            loading="lazy"
+          >
+        </a>
+      </li>
+
+      <!-- VUELTA AL COLE -->
+      <li class="secondary-header-menu__item">
+        <a href="#" class="secondary-header-menu__link">
+          VUELTA AL COLE
+        </a>
+      </li>
+
+      <!-- EXCLUSIVOS -->
+      <li class="secondary-header-menu__item">
+        <a href="#" class="secondary-header-menu__link">
+          EXCLUSIVOS
+        </a>
+      </li>
+
+      <!-- PRECIO ESPECIAL -->
+      <li class="secondary-header-menu__item">
+        <a href="#" class="secondary-header-menu__link link-highlight">
+          <img 
+            src="{{ 'precio-club.png' | asset_url }}" 
+            alt="Precio Club" 
+            class="club-icon" 
+            width="110" 
+            height="18" 
+            loading="lazy"
+          >
+        </a>
+      </li>
+
+      <!-- EDADES -->
+      <li class="secondary-header-menu__item has-submenu">
+        <a href="#" class="secondary-header-menu__link">
+          EDADES
+        </a>
+      </li>
+
+      <!-- JUGUETES -->
+      <li class="secondary-header-menu__item has-submenu">
+        <a href="#" class="secondary-header-menu__link">
+          JUGUETES
+        </a>
+      </li>
+
+      <!-- MARCA JUGUETTOS -->
+      <li class="secondary-header-menu__item">
+        <a href="#" class="secondary-header-menu__link has-badge">
+          <span class="badge-discount">-10%</span>
+          MARCA JUGUETTOS
+        </a>
+      </li>
+
+      <!-- FAN ZONE -->
+      <li class="secondary-header-menu__item">
+        <a href="#" class="secondary-header-menu__link">
+          FAN ZONE
+        </a>
+      </li>
+
+      <!-- OTRAS MARCAS -->
+      <li class="secondary-header-menu__item">
+        <a href="#" class="secondary-header-menu__link">
+          OTRAS MARCAS
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+{% stylesheet %}
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+ .secondary-header-menu {
+    background-color: #ffffff;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+  }
+
+  .secondary-header-menu__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .secondary-header-menu__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 42px;
+  }
+
+  .secondary-header-menu__item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .secondary-header-menu__link {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #2e4597;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: 0.1px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 100%;
+    transition: color 0.2s ease;
+    position: relative;
+  }
+
+  .secondary-header-menu__link:hover {
+    color: #e52e2e;
+  }
+
+  .secondary-header-menu__item.has-submenu > .secondary-header-menu__link::after {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    border-right: 2px solid #2e4597;
+    border-bottom: 2px solid #2e4597;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .secondary-header-menu__item.has-submenu:hover > .secondary-header-menu__link::after {
+    border-color: #e52e2e;
+    transform: rotate(225deg);
+    margin-bottom: -1px;
+  }
+
+  .imaginarium-logo-img {
+    height: 18px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .link-highlight {
+    color: #e52e2e;
+  }
+
+  .club-icon {
+    height: 20px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .has-badge {
+    position: relative;
+  }
+
+  .badge-discount {
+    position: absolute;
+    top: 1px;
+    right: -2px;
+    font-size: 8px;
+    font-weight: 800;
+    color: #e52e2e;
+    line-height: 1;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+
+  @media screen and (max-width: 989px) {
+   .secondary-header-menu {
+    display: none;
+  }
+
+   
+  }
+  @media screen and (min-width: 990px) {
+  .header__inline-menu {
+    display: none !important;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Secondary header menu",
+  "class": "section-secondary-header-menu",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Secondary header menu"
+    }
+  ]
+}
+{% endschema %}

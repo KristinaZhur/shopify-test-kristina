@@ -1,15 +1,6 @@
 {% doc %}
   Header Actions Component
-
   Renders the header actions.
-
-  @param {object} [section] - The section object providing settings such as actions_font.
-  @param {block} [block] - The block object, used for Shopify editor attributes.
-  @param {string} [display_style] - Controls display mode for header actions: 'icon' or 'text'.
-  @param {string} [customer_account_menu] - The menu handle passed to the shopify-account component.
-
-  @example
-  {% render 'header-actions', section: section %}
 {% enddoc %}
 
 <script
@@ -18,6 +9,7 @@
   fetchpriority="low"
 ></script>
 
+{% comment %}
 {% capture cart_icon %}
   <cart-icon
     class="header-actions__cart-icon{% if display_style == 'text' %} header-actions__cart-icon--text{% endif %}{% unless cart == empty %} header-actions__cart-icon--has-cart{% endunless %}"
@@ -55,7 +47,8 @@
       d="M10.375 3.813a3.063 3.063 0 1 1-6.125 0 3.063 3.063 0 0 1 6.125 0ZM7.313 9.5c-3.667 0-6.24 2.691-6.563 6.125h13.125C13.552 12.191 10.979 9.5 7.312 9.5Z"
     />
   </svg>
-{% endcapture %}
+{% endcapture %} 
+{% endcomment %}
 
 <header-actions
   {% if display_style == 'text' %}
@@ -63,59 +56,67 @@
   {% endif %}
   {{- block.shopify_attributes -}}
 >
-  {% if shop.customer_accounts_enabled %}
-    {% liquid
-      assign account_actions_style = ''
-      if display_style == 'text' and section
-        assign actions_font = section.settings.actions_font | default: 'body'
-        assign font_obj = settings.type_heading_font
-        case actions_font
-          when 'body'
-            assign font_obj = settings.type_body_font
-          when 'subheading'
-            assign font_obj = settings.type_subheading_font
-          when 'accent'
-            assign font_obj = settings.type_accent_font
-        endcase
-        assign font_family = font_obj.family | append: ', ' | append: font_obj.fallback_families
-        assign font_family_safe = font_family | replace: '"', "'"
-        assign account_actions_style = '--header-actions-font-family: ' | append: font_family_safe | append: '; --header-actions-font-weight: ' | append: font_obj.weight | append: ';'
-      endif
-    %}
-    <div
-      class="account-button header-actions__action{% if display_style == 'text' %} account-button--text{% endif %} color-custom-popover"
-    >
-      <shopify-account
-        menu="{{ customer_account_menu }}"
-        {% if account_actions_style != blank %}
-          style="{{ account_actions_style }}"
-        {% endif %}
-      >
-        {% if customer %}
-          <div class="account-button__fallback"></div>
-        {% else %}
-          <span
-            slot="signed-out-avatar"
-            class="account-button__text header-actions__text-style {% if display_style == 'icon' %}hidden{% else %}mobile:hidden{% endif %}"
-          >
-            {{ 'content.account_title' | t }}
-          </span>
+  <form action="{{ routes.search_url }}" method="get" role="search" class="header-search-pill">
+  <input
+    type="search"
+    name="q"
+    value="{{ search.terms | escape }}"
+    placeholder="Buscar"
+    class="header-search-pill__input"
+    aria-label="Buscar"
+  >
+  <input type="hidden" name="options[prefix]" value="last">
+  <button type="submit" class="header-search-pill__submit" aria-label="Buscar">
+  <img src="{{ 'lupa_new.svg' | asset_url }}" width="22" height="22" alt="Buscar">
+</button>
+</form>
 
-          <span
-            slot="signed-out-avatar"
-            class="{% if display_style != 'icon' %}desktop:hidden{% endif %}"
-            aria-hidden="true"
-          >
-            {{ account_icon }}
-          </span>
-        {% endif %}
-      </shopify-account>
-    </div>
-  {% endif %}
+  <a href="" class="header-actions__action action-item">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-globe-central-south-asia-fill action-icon" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0m0 1a7 7 0 0 0-3.115.73.48.48 0 0 0 .137.292.488.488 0 0 1-.126.78l-.292.145a.7.7 0 0 0-.187.136l-.48.48a1 1 0 0 1-1.023.242l-.02-.007a1 1 0 0 0-.461-.041A6.97 6.97 0 0 0 1 8a6.96 6.96 0 0 0 .883 3.403l.86-.213c.444-.112.757-.512.757-.971v-.184a1 1 0 0 1 .445-.832l.04-.026a1 1 0 0 0 .153-1.54L3.12 6.622a.415.415 0 0 1 .542-.624l1.09.817a.5.5 0 0 0 .523.047A.5.5 0 0 1 6 7.31v.455a.8.8 0 0 0 .13.432l.796 1.193a1 1 0 0 1 .116.238l.73 2.19a1 1 0 0 0 .949.683h.058a1 1 0 0 0 .949-.684l.73-2.189q.042-.127.116-.238l.791-1.187A.45.45 0 0 1 11.743 8c.16 0 .306.083.392.218.557.875 1.63 2.282 2.365 2.282l.04-.003A7 7 0 0 0 8 1"/>
+    </svg>
+    <span class="action-label">EUROPA</span>
+  </a>
 
+  <!-- EL CLUB -->
+  <a href="#" class="header-actions__action action-item">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill action-icon" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <span class="action-label">EL CLUB</span>
+  </a>
+
+  <!-- TIENDAS -->
+  <a href="#" class="header-actions__action action-item">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt action-icon" viewBox="0 0 16 16">
+      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+    </svg> 
+    <span class="action-label">TIENDAS</span>
+  </a>
+
+  <!-- FAVORITOS -->
+  <a href="#" class="header-actions__action action-item">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart action-icon" width="20" height="20" viewBox="0 0 16 16">
+      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+    </svg> 
+    <span class="action-label">FAVORITOS</span>
+  </a>
+
+  <!-- ACCOUNT -->
+  <a href="#" class="header-actions__action action-item">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person action-icon" viewBox="0 0 16 16">
+      <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+    </svg>
+    <span class="action-label">
+      INICIAR SESIÓN
+    </span>
+  </a>
+
+  <!-- CART -->
   {% if settings.cart_type == 'drawer' and template.name != 'cart' %}
     <button
-      class="header-actions__action button-unstyled{% if display_style == 'text' %} header-actions__text-style{% endif %}"
+      class="header-actions__action button-unstyled action-item"
       on:click="#cart-drawer/toggle"
       aria-haspopup="dialog"
       aria-expanded="false"
@@ -124,25 +125,32 @@
       aria-describedby="cart-bubble-text"
       data-testid="cart-drawer-trigger"
     >
-      {{ cart_icon }}
+      <div class="cart-icon-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-basket3 action-icon" viewBox="0 0 16 16">
+          <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6z"/>
+        </svg>
+        
+        {% if cart.item_count > 0 %}
+          <span class="cart-badge">{{ cart.item_count }}</span>
+        {% endif %}
+      </div>
+      <span class="action-label">MI CESTA</span>
     </button>
   {% else %}
     <a
       href="{{ routes.cart_url }}"
-      class="header-actions__action action__cart{% if display_style == 'text' %} header-actions__text-style{% endif %}"
+      class="header-actions__action action-item"
       aria-label="{{ 'accessibility.cart' | t }}"
-      aria-describedby="cart-bubble-text"
     >
-      {{ cart_icon }}
+      <div class="cart-icon-wrap">
+        <img src="{{ 'icon-cart.svg' | asset_url }}" alt="Cart" width="20" height="20" class="action-icon">
+        {% if cart.item_count > 0 %}
+          <span class="cart-badge">{{ cart.item_count }}</span>
+        {% endif %}
+      </div>
+      <span class="action-label">MI CESTA</span>
     </a>
   {% endif %}
-
-  <span
-    ref="liveRegion"
-    class="visually-hidden"
-    role="status"
-    data-testid="cart-count-live-region"
-  ></span>
 </header-actions>
 
 <script
@@ -152,182 +160,157 @@
 ></script>
 
 {% stylesheet %}
-  .header {
-    --account-offset-top: calc(
-      var(--header-group-height) + (var(--header-height) * var(--transparent-header-offset-boolean))
-    );
-
-    &[data-sticky-state='active'] {
-      --account-offset-top: calc(var(--header-height) - 1px);
-    }
+  header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow: visible;
+    width: 100%;
+    justify-content: flex-end;
   }
 
-  .account-button {
-    /* Remove the background color from the color scheme, we want to inherit the color of the header */
+  .header-search-pill {
+    position: relative;
+    width: 245px;
+    height: 45px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  .header-search-pill__input {
+    width: 100%;
+    height: 45px;
+    padding: 0 45px 0 20px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    background-color: #ffffff;
+    color: #2d337e;
+    font-size: 16px;
+    font-weight: 700;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .header-search-pill__input::placeholder {
+    color: #2d337e;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 1;
+    -webkit-text-fill-color: #2d337e;
+  }
+
+  .header-search-pill__input::-webkit-input-placeholder {
+    color: #2d337e;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 1;
+    -webkit-text-fill-color: #2d337e;
+  }
+
+  .header-search-pill__submit {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
     background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #2d337e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .account-button__icon,
-  .account-button__text {
-    color: var(--color-account-icon);
-    transition: color var(--header-content-transition-timing);
-    -webkit-font-smoothing: antialiased;
+  /* ocultar lupa previa */
+  header-actions > details-modal,
+  header-actions > .header__search,
+  header-actions > [data-testid="search-trigger"] {
+    display: none !important;
   }
 
-  shopify-account {
-    --shopify-account-font-heading: var(--font-heading--family);
-    --shopify-account-font-heading-weight: var(--font-heading--weight);
-    --shopify-account-font-body: var(--font-body--family);
-    --shopify-account-font-body-weight: var(--font-body--weight);
-    --shopify-account-radius-base: var(--style-border-radius-popover);
-    --shopify-account-radius-button: var(--style-border-radius-buttons-primary);
-    --shopify-account-radius-button-small: var(--style-border-radius-buttons-primary);
-    --shopify-account-radius-input: var(--style-border-radius-buttons-primary);
-    --shopify-account-color-background: var(--color-background);
-    --shopify-account-color-text: var(--color-foreground);
-    --shopify-account-color-accent: var(--color-primary-button-background);
-    --shopify-account-color-accent-text: var(--color-primary-button-text);
-    --shopify-account-dialog-position-top: var(--account-offset-top);
-
-    &:not(:defined) {
-      min-width: 44px;
-      height: 44px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* Match the line height of the other buttons */
-      line-height: normal;
-    }
+  /* icons*/
+  .action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    padding: 5px 0 0 0;
+    cursor: pointer;
+    color: inherit;
+    overflow: visible;
+    flex-shrink: 0;
   }
 
-  .account-button__fallback {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-color: var(--shopify-account-color-accent, #0a142f);
-  }
-
-  .account-button--text shopify-account {
+  .action-item__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
     color: inherit;
   }
 
-  .cart-actions summary {
-    padding-inline: 0;
-    padding-block: var(--padding-sm);
-    line-height: 1.2;
-    min-height: var(--minimum-touch-target);
+  .action-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-bottom: 3px;
+    display: block;
   }
 
-  header-actions {
-    display: flex;
-
-    @media screen and (max-width: 749px) {
-      justify-self: flex-end;
-    }
+  .action-label {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    line-height: 1;
   }
 
-  @media screen and (min-width: 750px) {
-    .header-actions--text {
-      gap: var(--gap-xl);
-    }
-
-    .header-actions__text-style {
-      font-size: var(--header-actions-font-size);
-      font-family: var(--header-actions-font-family);
-      font-weight: var(--header-actions-font-weight);
-      text-transform: var(--header-actions-text-case);
-    }
-  }
-
-  #header-component[data-menu-style='drawer'] header-actions {
-    justify-self: flex-end;
-  }
-
-  .header__column--right header-actions {
-    margin-inline-start: calc(var(--gap-md) * -1);
-  }
-
-  .header-actions__cart-icon {
-    --cart-bubble-size: 20px;
-    --cart-bubble-top: 4.5px;
-    --cart-bubble-right: 2.5px;
-
+  .cart-icon-wrap {
     position: relative;
-  }
-
-  .header-actions__cart-icon .cart-bubble {
-    position: absolute;
-    width: var(--cart-bubble-size, 20px);
-    top: var(--cart-bubble-top);
-    right: var(--cart-bubble-right);
-  }
-
-  @media screen and (min-width: 750px) {
-    .header-actions__cart-icon--text.header-actions__cart-icon .cart-bubble {
-      position: relative;
-      top: 0;
-    }
-  }
-
-  .header-actions__cart-icon .cart-bubble__text {
-    font-family: var(--font-paragraph--family);
-    font-weight: var(--font-paragraph--weight);
-  }
-
-  .header-actions__cart-icon.header-actions__cart-icon--has-cart svg {
-    /* Create donut mask where the cart bubble sits */
-    mask: radial-gradient(
-      calc(var(--cart-bubble-size) + 2px) at calc(100% - var(--cart-bubble-right)) var(--cart-bubble-top),
-      transparent 45.45%,
-      #fff 45.45%,
-      #fff 100%
-    );
-  }
-
-  .cart-bubble.cart-bubble--animating .cart-bubble__background {
-    animation: grow var(--animation-speed) var(--animation-easing);
-  }
-
-  .cart-bubble--animating .cart-bubble__text {
-    --start-y: -1em;
-    --start-opacity: 1;
-    /* Set initial transform state before animation starts */
-    transform: translate(0, var(--start-y, -1em));
-    opacity: var(--start-opacity, 1);
-    animation: move-and-fade var(--animation-speed) var(--animation-easing);
-  }
-
-  cart-icon:has(.cart-bubble__text-count:empty) {
-    --cart-bubble-size: 10px;
-    --cart-bubble-top: 9px;
-    --cart-bubble-right: 9px;
-
-    .svg-wrapper {
-      --cart-bubble-top: 4px;
-      --cart-bubble-right: 4px;
-    }
-  }
-
-  @media screen and (min-width: 750px) {
-    cart-icon.header-actions__cart-icon--text:has(.cart-bubble__text-count:empty) {
-      --cart-bubble-right: 2.5px;
-    }
-  }
-
-  .header-actions__text {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
-  @media screen and (min-width: 750px) {
-    .header-actions__cart-icon--text {
-      display: flex;
-      align-items: center;
-      gap: var(--gap-xs);
+  .cart-badge {
+    position: absolute;
+    top: -4px;
+    right: -7px;
+    background-color: #e52e2e;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 8px;
+    font-weight: bold;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    overflow: visible;
+  }
+
+  .account-button {
+    background: transparent;
+  }
+
+  @media screen and (max-width: 749px) {
+    header-actions {
+      justify-self: flex-end;
+      gap: 2px;
     }
 
-    .header__column--right .header-actions--text {
-      margin-inline-start: 0;
+    .header-search-pill {
+      display: none;
+    }
+
+    .action-label {
+      display: none;
     }
   }
 {% endstylesheet %}

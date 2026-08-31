@@ -21,12 +21,15 @@
   <div class="juguettos-banners-grid">
     <a href="/collections/all" class="juguettos-banner-card">
       <img src="{{ 'banner-1.jpg' | asset_url }}" alt="Exclusivo juguettos" loading="lazy" width="400" height="400">
+      <span class="juguettos-banner-btn">Comprar</span>
     </a>
     <a href="/collections/all" class="juguettos-banner-card">
       <img src="{{ 'banner-2.jpg' | asset_url }}" alt="Juguetes" loading="lazy" width="400" height="400">
+      <span class="juguettos-banner-btn">Comprar</span>
     </a>
     <a href="/collections/all" class="juguettos-banner-card">
       <img src="{{ 'banner-3.png' | asset_url }}" alt="Juguetes educativos" loading="lazy" width="400" height="400">
+      <span class="juguettos-banner-btn">Comprar</span>
     </a>
   </div>
 </div>
@@ -61,11 +64,13 @@
     gap: 1.5rem;
   }
   .juguettos-banner-card {
+    position: relative;
     display: block;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
   }
   .juguettos-banner-card:hover {
     transform: translateY(-4px);
@@ -77,6 +82,35 @@
     display: block;
     object-fit: cover;
   }
+
+  /* estilo para btn */
+  .juguettos-banner-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: #002878;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 8px 28px;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .juguettos-banner-card:hover .juguettos-banner-btn {
+    background-color: #002878;
+    color: #ffffff;
+  }
+
+  @media (max-width: 990px) {
+    .juguettos-banners-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (max-width: 768px) {
     .juguettos-banners-title {
       font-size: 1.75rem;
@@ -86,6 +120,11 @@
     }
     .juguettos-banners-grid {
       grid-template-columns: 1fr;
+    }
+    .juguettos-banner-btn {
+      bottom: 16px;
+      padding: 6px 22px;
+      font-size: 0.85rem;
     }
   }
 {% endstylesheet %}

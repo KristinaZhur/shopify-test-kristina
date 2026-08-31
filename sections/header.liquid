@@ -500,8 +500,8 @@
   }
 
   @media screen and (min-width: 750px) {
-    #header-component[data-menu-style='menu'] :is(.header-menu, .dropdown-localization) {
-      display: flex;
+    #header-component[data-menu-style='menu'] .header-menu {
+    display: none !important;
     }
   }
 
@@ -880,7 +880,20 @@
       header-actions {
         grid-area: rightB;
       }
+      
     }
+    .header__columns {
+    --header-mobile-bookend: max-content;
+  }
+
+  
+  .header-logo,
+  .header-logo__image-container,
+  .header__heading-link {
+    justify-self: flex-start;
+    margin-left: 0;
+    padding-left: 0;
+  }
   }
 
   /* not ideal but we need to duplicate these styles for when touch comes into play
@@ -1222,7 +1235,7 @@
           "label": "t:options.right"
         }
       ],
-      "default": "center"
+      "default": "left"
     },
     {
       "type": "header",
