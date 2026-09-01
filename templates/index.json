@@ -9,47 +9,6 @@
  */
 {
   "sections": {
-    "section_marquee_DYXr7D": {
-      "type": "section-marquee",
-      "blocks": {
-        "text_BiBnqg": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Envío gratis a partir de 30€ — Juguetes y Juegos de Mesa</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "tight",
-            "letter_spacing": "loose",
-            "case": "none",
-            "wrap": "nowrap",
-            "text_color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_BiBnqg"
-      ],
-      "name": "t:names.marquee_section",
-      "settings": {
-        "movement_direction": "normal",
-        "background_color": "#1069f9",
-        "padding-block-start": 24,
-        "padding-block-end": 24,
-        "gap_between_elements": 24
-      }
-    },
     "slideshow_hKzkwJ": {
       "type": "slideshow",
       "blocks": {
@@ -82,7 +41,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Comprar",
-                "link": "shopify://collections/all",
+                "link": "shopify://collections/frontpage",
                 "open_in_new_tab": true,
                 "style_class": "button-custom",
                 "custom_button_background": "#001c85",
@@ -560,6 +519,310 @@
             "group_btba8i"
           ]
         },
+        "group_iYn4zK": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "icon_xeKB49": {
+              "type": "icon",
+              "settings": {
+                "icon": "heart",
+                "image_upload": "shopify://shop_images/647_jurassic_377x377_ff91c807-62ab-4cf8-a008-0eec359b2e75.png",
+                "width": 108,
+                "link": "",
+                "open_in_new_tab": false,
+                "icon_color": ""
+              },
+              "blocks": {}
+            },
+            "group_Rgbayf": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 4,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_XJib9N": {
+                  "type": "text",
+                  "settings": {
+                    "text": "",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h3",
+                    "font": "var(--font-body--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_qNyfAp": {
+                  "type": "text",
+                  "settings": {
+                    "text": "",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_XJib9N",
+                "text_qNyfAp"
+              ]
+            }
+          },
+          "block_order": [
+            "icon_xeKB49",
+            "group_Rgbayf"
+          ]
+        },
+        "group_q8BWtH": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "icon_KRVPFC": {
+              "type": "icon",
+              "settings": {
+                "icon": "heart",
+                "image_upload": "shopify://shop_images/639_lego_377x377_2db965b7-9357-47ee-a9f9-1be8a7de8121.png",
+                "width": 108,
+                "link": "",
+                "open_in_new_tab": false,
+                "icon_color": "#f1f4fa"
+              },
+              "blocks": {}
+            },
+            "group_XHUrAU": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 4,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_J3QNzK": {
+                  "type": "text",
+                  "settings": {
+                    "text": "",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h3",
+                    "font": "var(--font-body--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_TNJRHC": {
+                  "type": "text",
+                  "settings": {
+                    "text": "",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_J3QNzK",
+                "text_TNJRHC"
+              ]
+            }
+          },
+          "block_order": [
+            "icon_KRVPFC",
+            "group_XHUrAU"
+          ]
+        },
         "group_UxJwHx": {
           "type": "group",
           "settings": {
@@ -716,6 +979,8 @@
       "block_order": [
         "group_W4rm6C",
         "group_EHBXpD",
+        "group_iYn4zK",
+        "group_q8BWtH",
         "group_UxJwHx"
       ],
       "name": "t:names.icons_with_text",
@@ -732,7 +997,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "",
+        "background_color": "#f1f4fa",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
@@ -748,12 +1013,89 @@
         "padding-block-end": 48
       }
     },
-    "juguettos_promo_banners_V94wRx": {
+    "juguettos_promo_banners_jH76dA": {
       "type": "juguettos-promo-banners",
       "name": "Juguettos 3 banners",
       "settings": {
         "heading": "Juguetería online",
         "text": "Descubre en nuestra tienda de juguetes más de 1000 referencias diferentes con las mejores marcas y licencias en todos los productos. Desde juguetes educativos, juegos de mesa, pasando por los mejores disfraces para las celebraciones más divertidas."
+      }
+    },
+    "toys_by_age_PcccdR": {
+      "type": "toys-by-age",
+      "blocks": {
+        "age_pill_YhcDmx": {
+          "type": "age_pill",
+          "settings": {
+            "label": "bebés",
+            "link": ""
+          }
+        },
+        "age_pill_cMcVFr": {
+          "type": "age_pill",
+          "settings": {
+            "label": "1 a 2 años",
+            "link": ""
+          }
+        },
+        "age_pill_ACeBke": {
+          "type": "age_pill",
+          "settings": {
+            "label": "3 a 4 años",
+            "link": ""
+          }
+        },
+        "age_pill_LJixiq": {
+          "type": "age_pill",
+          "settings": {
+            "label": "5 a 6 años",
+            "link": ""
+          }
+        },
+        "age_pill_GNx8mE": {
+          "type": "age_pill",
+          "settings": {
+            "label": "7 a 8 años",
+            "link": ""
+          }
+        },
+        "age_pill_gGAFyG": {
+          "type": "age_pill",
+          "settings": {
+            "label": "9 a 10 años",
+            "link": ""
+          }
+        },
+        "age_pill_7dKdBH": {
+          "type": "age_pill",
+          "settings": {
+            "label": "11 a 12 años",
+            "link": ""
+          }
+        },
+        "age_pill_4iwLYm": {
+          "type": "age_pill",
+          "settings": {
+            "label": "13 a 14 años",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "age_pill_YhcDmx",
+        "age_pill_cMcVFr",
+        "age_pill_ACeBke",
+        "age_pill_LJixiq",
+        "age_pill_GNx8mE",
+        "age_pill_gGAFyG",
+        "age_pill_7dKdBH",
+        "age_pill_4iwLYm"
+      ],
+      "name": "Juguetes por edad",
+      "settings": {
+        "title": "Juguetes para:",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "section_CpEaeN": {
@@ -1193,7 +1535,7 @@
                 "text_BWtJBV": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>10% enmarcas propias</strong></p>",
+                    "text": "<p><strong>10% en marcas propias</strong></p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1345,7 +1687,7 @@
                 "text_hDzw86": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Ampas Club20% de descuentoen marca propia</strong></p>",
+                    "text": "<p><strong>Ampas Club20% de descuento en marca propia</strong></p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1497,7 +1839,7 @@
                 "text_Wt7CyN": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Promocionesespeciales</strong></p>",
+                    "text": "<p><strong>Promociones especiales</strong></p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1649,7 +1991,7 @@
                 "text_9aw7N3": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Cheque descuentopara cumpleaños</strong></p>",
+                    "text": "<p><strong>Cheque descuento para cumpleaños</strong></p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1801,7 +2143,7 @@
                 "text_yAHARM": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Cheque descuentode bienvenida</strong></p>",
+                    "text": "<p><strong>Cheque descuento de bienvenida</strong></p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2011,6 +2353,45 @@
         "padding-block-end": 48
       }
     },
+    "juguettos_banner_sin_texto_Db7edR": {
+      "type": "juguettos-banner-sin-texto",
+      "blocks": {
+        "banner_yEUHre": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/680_440x440px_Games.jpg",
+            "link": "",
+            "button_text": ""
+          }
+        },
+        "banner_JxceFf": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/666_OFERTTA_440x440_cleanup.png",
+            "link": "",
+            "button_text": "Comprar"
+          }
+        },
+        "banner_ikkjQG": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/694_440x440px_PD.jpg",
+            "link": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "banner_yEUHre",
+        "banner_JxceFf",
+        "banner_ikkjQG"
+      ],
+      "name": "Juguettos 3 Banners sin texto",
+      "settings": {
+        "heading": "",
+        "text": ""
+      }
+    },
     "section_GrbQhX": {
       "type": "section",
       "blocks": {
@@ -2174,26 +2555,26 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
+            "gap": 0,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
-            "height": "fit",
+            "height": "custom",
             "custom_height": 100,
             "background_media": "none",
-            "background_color": "",
+            "background_color": "{{ settings.color_palette.background }}",
             "video_position": "cover",
             "background_image_position": "cover",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "border": "none",
-            "border_width": 1,
+            "border": "solid",
+            "border_width": 6,
             "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
+            "border_color": "#e6d16b",
+            "border_radius": 100,
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
@@ -2211,7 +2592,7 @@
                 "width": 120,
                 "link": "",
                 "open_in_new_tab": false,
-                "icon_color": ""
+                "icon_color": "#f1f4fa"
               },
               "blocks": {}
             },
@@ -2300,26 +2681,26 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
+            "gap": 0,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
-            "height": "fit",
+            "height": "custom",
             "custom_height": 100,
             "background_media": "none",
-            "background_color": "",
+            "background_color": "{{ settings.color_palette.background }}",
             "video_position": "cover",
             "background_image_position": "cover",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
+            "border": "solid",
+            "border_width": 6,
+            "border_opacity": 0,
+            "border_color": "#e6d16b",
+            "border_radius": 100,
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
@@ -2426,26 +2807,26 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
+            "gap": 0,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
-            "height": "fit",
+            "height": "custom",
             "custom_height": 100,
             "background_media": "none",
-            "background_color": "",
+            "background_color": "{{ settings.color_palette.background }}",
             "video_position": "cover",
             "background_image_position": "cover",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "border": "none",
-            "border_width": 1,
+            "border": "solid",
+            "border_width": 6,
             "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
+            "border_color": "#e6d16b",
+            "border_radius": 100,
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
@@ -2552,26 +2933,26 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
+            "gap": 0,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
-            "height": "fit",
+            "height": "custom",
             "custom_height": 100,
             "background_media": "none",
-            "background_color": "",
+            "background_color": "{{ settings.color_palette.background }}",
             "video_position": "cover",
             "background_image_position": "cover",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "border": "none",
-            "border_width": 1,
+            "border": "solid",
+            "border_width": 6,
             "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
+            "border_color": "#e6d16b",
+            "border_radius": 100,
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
@@ -2678,26 +3059,26 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
+            "gap": 0,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
-            "height": "fit",
+            "height": "custom",
             "custom_height": 100,
             "background_media": "none",
-            "background_color": "",
+            "background_color": "{{ settings.color_palette.background }}",
             "video_position": "cover",
             "background_image_position": "cover",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "border": "none",
-            "border_width": 1,
+            "border": "solid",
+            "border_width": 6,
             "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
+            "border_color": "#e6d16b",
+            "border_radius": 100,
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
@@ -2775,26 +3156,26 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
+            "gap": 0,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
-            "height": "fit",
+            "height": "custom",
             "custom_height": 100,
             "background_media": "none",
-            "background_color": "",
+            "background_color": "{{ settings.color_palette.background }}",
             "video_position": "cover",
             "background_image_position": "cover",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "border": "none",
-            "border_width": 1,
+            "border": "solid",
+            "border_width": 6,
             "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
+            "border_color": "#e6d16b",
+            "border_radius": 100,
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
@@ -2885,7 +3266,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "",
+        "background_color": "#f1f4fa",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
@@ -2903,13 +3284,14 @@
     }
   },
   "order": [
-    "section_marquee_DYXr7D",
     "slideshow_hKzkwJ",
     "section_AG7B6D",
-    "juguettos_promo_banners_V94wRx",
+    "juguettos_promo_banners_jH76dA",
+    "toys_by_age_PcccdR",
     "section_CpEaeN",
     "section_wqNeEg",
     "section_nYiGRa",
+    "juguettos_banner_sin_texto_Db7edR",
     "section_GrbQhX",
     "section_YW4NzN"
   ]

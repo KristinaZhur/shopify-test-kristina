@@ -12,13 +12,158 @@
     "main": {
       "type": "product-information",
       "blocks": {
+        "accordion_gNdyjN": {
+          "type": "accordion",
+          "name": "t:names.accordion",
+          "settings": {
+            "icon": "caret",
+            "dividers": true,
+            "divider_color": "#0055B5",
+            "type_preset": "h6",
+            "background_color": "",
+            "text_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "accordion_row_rBN8bh": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Política de devoluciones",
+                "open_by_default": true,
+                "icon": "none",
+                "width": 32
+              },
+              "blocks": {
+                "text_XkGkjy": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Nuestro objetivo es que cada cliente  quede totalmente satisfecho con su compra. Si no es así, cuéntanoslo y haremos todo lo posible para solucionarlo.</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.foreground }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_XkGkjy"
+              ]
+            },
+            "accordion_row_wMdDgr": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Envío",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_gCJc8Y": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Trabajaremos para enviar tu pedido lo antes posible. Cuando se envíe, recibirás un correo electrónico con más información. Los tiempos de entrega varían según tu ubicación.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_gCJc8Y"
+              ]
+            },
+            "accordion_row_3waXpt": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Fabricación",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_UBwYQ7": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Nuestros productos se fabrican tanto localmente como globalmente. Seleccionamos cuidadosamente a nuestros socios de fabricación para garantizar alta calidad y un precio justo.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_UBwYQ7"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_rBN8bh",
+            "accordion_row_wMdDgr",
+            "accordion_row_3waXpt"
+          ]
+        },
         "review_YFXNtY": {
           "type": "review",
           "name": "t:names.product_review_stars",
           "settings": {
             "stars_style": "shaded",
             "show_number": true,
-            "text_color": "#D32313",
+            "text_color": "#d32313",
             "type_preset": "paragraph",
             "width": "100%",
             "alignment": "left"
@@ -100,6 +245,28 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "accordion_74BKWN": {
+              "type": "accordion",
+              "name": "t:names.accordion",
+              "settings": {
+                "icon": "caret",
+                "dividers": true,
+                "divider_color": "",
+                "type_preset": "h6",
+                "background_color": "",
+                "text_color": "",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "group_icgrde": {
               "type": "group",
               "name": "t:names.header",
@@ -317,6 +484,7 @@
             }
           },
           "block_order": [
+            "accordion_74BKWN",
             "group_icgrde",
             "divider_VJhene",
             "variant_picker_R3rGDr",
@@ -326,6 +494,7 @@
         }
       },
       "block_order": [
+        "accordion_gNdyjN",
         "review_YFXNtY",
         "disclosures_g9mWze"
       ],
